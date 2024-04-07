@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nivel 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            display: block;
+            margin: 0 auto; /* Centraliza a imagem horizontalmente */
+            max-width: 100%; /* Garante que a imagem não ultrapasse a largura máxima do contêiner */
+            margin-bottom: 20px; /* Adiciona um espaço abaixo da imagem */
+            border-radius: 8px; /* Adiciona borda arredondada à imagem */
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            display: none;
+            margin-top: 20px;
+            color: red;
+            font-weight: bold;
+        }
+        .error-image {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>uuuu... boa, boa, agora vamos prosseguir</h1>
+        <img src="https://r2.easyimg.io/80zgv7yzv/picsart_24-04-07_18-35-24-594.jpg" alt="Imagem de Exemplo">
+        <p>
+            So uma imagem normal, nada de ma- pera... tem um negócio na esquerda... será que é a senha..?
+        </p>
+        <form id="input-form">
+            <input type="password" id="password-field" placeholder="Digite a senha..." required>
+            <button type="submit">Enviar</button>
+        </form>
+        <p class="error-message" id="error-message">ERRROOOOUUU!</p>
+        <img class="error-image" id="error-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoZsJVaQDUek7KBtyblpWM5-puoylskDepHKHwE1AoKU6ZTGxqiHCYZZ0&s=10" alt="Erro">
+    </div>
+
+    <script>
+        document.getElementById('input-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita a submissão do formulário
+
+            const password = document.getElementById('password-field').value.trim().toLowerCase();
+
+            // Verifica se a senha inserida está correta
+            if (password === 'mizu') {
+                // Redireciona para outra página autorizada após inserir a senha correta
+                window.location.href = 'outra-pagina.html'; // Página autorizada após inserir a senha correta
+            } else {
+                // Mostra a mensagem de erro e a imagem de erro
+                document.querySelector('.error-message').style.display = 'block';
+                document.querySelector('.error-image').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
