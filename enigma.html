@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>boa sorte :D</title>
+    <title>Boa sorte :D</title>
     <style>
         body {
             display: flex;
@@ -43,13 +43,13 @@
         button:hover {
             background-color: #0056b3;
         }
-        #error-message {
+        .error-message {
             display: none;
             margin-top: 20px;
             color: red;
             font-weight: bold;
         }
-        #error-image {
+        .error-image {
             display: none;
             margin-top: 20px;
         }
@@ -64,11 +64,11 @@
             Qual nome dado aos "monstros" de olhos azuis?
         </p>
         <form id="input-form">
-            <input type="text" id="input-field" placeholder="Digite a senha...">
+            <input type="text" id="input-field" placeholder="Digite a senha..." required>
             <button type="submit">Enviar</button>
         </form>
-        <p id="error-message">ERRROOOOUUU!</p>
-        <img id="error-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoZsJVaQDUek7KBtyblpWM5-puoylskDepHKHwE1AoKU6ZTGxqiHCYZZ0&s=10" alt="Erro">
+        <p class="error-message" id="error-message">ERRROOOOUUU!</p>
+        <img class="error-image" id="error-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoZsJVaQDUek7KBtyblpWM5-puoylskDepHKHwE1AoKU6ZTGxqiHCYZZ0&s=10" alt="Erro">
     </div>
 
     <script>
@@ -83,8 +83,8 @@
                 window.location.href = 'https://www.exemplo.com/pagina-proxima';
             } else {
                 // Mostra a mensagem de erro e a imagem de erro
-                document.getElementById('error-message').style.display = 'block';
-                document.getElementById('error-image').style.display = 'block';
+                document.querySelector('.error-message').style.display = 'block';
+                document.querySelector('.error-image').style.display = 'block';
             }
         });
     </script>
