@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivel 6</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            display: none;
+            margin-top: 20px;
+            color: red;
+            font-weight: bold;
+        }
+        /* Estilos para a imagem */
+        img {
+            max-width: 100%; /* Largura máxima da imagem */
+            height: auto; /* Altura automática para manter a proporção */
+            display: block; /* Garante que a imagem respeite as margens */
+            margin-bottom: 20px; /* Margem inferior para separar a imagem do texto */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <h1>vamuuu!! é a ultima</h1>
+            <h1>vamos testar sua memória?</h1> <h4>"amas, só agora?" sim =D</h4>
+               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSx1XpauskQsIpBYJBc19Gah5MqSVRKOe7-DLx6ADVUy8w5N4rTNJs2mtrU&s=10" alt="Imagem de exemplo">
+        <p>
+          "está um belo dia lá fora... passaros cantando, flores desabrochando... em dias como esse crianças como voçê..."
+        </p>
+        <form id="password-form">
+            <input type="password" id="password-field" placeholder="a comida favorita do papyrus é..." required>
+            <button type="submit">Enviar</button>
+        </form>
+        <p class="error-message" id="error-message">Senha incorreta. Tente novamente.</p>
+    </div>
+
+    <script>
+        document.getElementById('password-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita a submissão do formulário
+
+            const password = document.getElementById('password-field').value.trim().toLowerCase();
+
+            // Verifica se a senha inserida está correta
+            if (password === 'espaguete') { // Substitua 'outrasenha' pela sua senha desejada
+                // Redireciona para outra página autorizada
+                window.location.href = 'pagina7.html'; // Página autorizada após inserir a senha correta
+            } else {
+                // Mostra a mensagem de erro
+                document.querySelector('.error-message').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
